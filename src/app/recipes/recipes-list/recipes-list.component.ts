@@ -10,10 +10,13 @@ export class RecipesListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe('First Test Recipe',
       'This is simply a test number 1',
-      'https://cdn.pixabay.com/photo/2017/07/16/10/43/recipe-2508859_960_720.jpg'),
+      'https://upload.wikimedia.org/wikipedia/commons/e/e9/Egyptian_food_Koshary.jpg'),
     new Recipe('Second Test Recipe',
-      'This is simply a test number 2',
-      'https://cdn.pixabay.com/photo/2017/07/16/10/43/recipe-2508859_960_720.jpg')
+      'This is simply a new test for number 2',
+      'https://images.pexels.com/photos/105588/pexels-photo-105588.jpeg?cs=srgb&dl=broccoli-chicken-cooking-105588.jpg&fm=jpg'),
+      new Recipe('Third Test Recipe',
+      'This is simply a test number 3',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl-hYyN0HGtpUtJKmqsfI3yfPf6OjdhfG3lhi4PpO5o4FY1zEm')
   ];
   @Output() currentlySelectedRecipe = new EventEmitter<Recipe>();
 

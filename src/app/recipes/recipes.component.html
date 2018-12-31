@@ -3,6 +3,9 @@
     <app-recipes-list (currentlySelectedRecipe)="selectRecipe($event)"></app-recipes-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail *ngIf="selectedRecipe" [recipe]="selectedRecipe"></app-recipe-detail>
+    <app-recipe-detail *ngIf="selectedRecipe; else infoText" [recipe]="selectedRecipe"></app-recipe-detail>
+    <ng-template #infoText>
+      <p>Please select a Recipe...</p>
+    </ng-template>
   </div>
 </div>

@@ -20,4 +20,11 @@ export class ShoppingListService {
     this.ingredients.push(ingredient);
     this.ingredientsChanged.emit(this.getIngredients());
   }
+
+  addIngredients(ingredients: Ingredient[]) {
+    // This is the spread operator from Es6 which allows us to convert an array of ingredients into
+    // a list of ingredients and push all of them at once onto the existing
+    this.ingredients.push(...ingredients);
+    this.ingredientsChanged.emit(this.getIngredients());
+  }
 }
